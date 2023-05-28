@@ -14,3 +14,6 @@ stages:
   - job: FirstJob
     steps:
     - bash: echo Build WELCOME TO CANADA
+  - job: SecondtJop
+    steps:
+    - bash: echo Build CANADA IS A GREAT PLACE TO BE
