@@ -8,15 +8,15 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
-stages:
-- stage: Build
-  jobs:
-  - job: FirstJob
-    steps:
-    - bash: echo Build WELCOME TO CANADA
-  - job: SecondtJop
-    steps:
-    - bash: echo "Do the Build"
+# stages:
+# - stage: Build
+#   jobs:
+#   - job: FirstJob
+#     steps:
+#     - bash: echo Build WELCOME TO CANADA
+#   - job: SecondtJop
+#     steps:
+#     - bash: echo "Do the Build"
 
 - stage: DevDeploy
   jobs:
