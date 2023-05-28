@@ -14,7 +14,5 @@ stages:
   - job: FirstJob
     steps:
     - bash: echo Build FirstJob
-  - job: Secondjob
-    steps:
-    - bash: echo Build welcome
+  
 
