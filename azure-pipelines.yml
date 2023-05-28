@@ -18,17 +18,13 @@ stages:
   jobs:
   - deployment: DevDeployjob 
     environment:Dev
-    strategy:
       runOnce:
-        deploy:
-          steps:
+        steps:
           - script: echo "Deploy to Dev"
 - stage: QADeploy
   jobs:
   - deployment: DevQADeploy
     environment:QA
-    strategy:
       runOnce:
-        deploy:
           steps:
           - script: echo "Deploy to QA"
