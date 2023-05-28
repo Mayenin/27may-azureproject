@@ -16,4 +16,23 @@ stages:
     - bash: echo Build WELCOME TO CANADA
   - job: SecondtJop
     steps:
-    - bash: echo Build CANADA IS A GREAT PLACE TO BE
+    - bash: echo "Do the Build"
+
+- stage: DevDeploy
+  jobs:
+  - deployment: Dev
+    environment:DevDeployjob 
+    strategy:
+       runOnce:
+        deploy:
+          steps:
+          - script: echo "Deploy to Dev"
+- stage: QADeploy
+  jobs:
+  - deployment: DevQADeploy
+    environment:QA
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - script: echo "Deploy to QA"
